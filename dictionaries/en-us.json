@@ -1,0 +1,112 @@
+
+{
+    "header": {
+        "docs": "Docs",
+        "projects": "Projects",
+        "contribute": "Contribute"
+    },
+    "hero": {
+        "title": {
+            "before": "Managing",
+            "after": "Efficiently",
+            "rotatingHighlights": [
+                "Organizations",
+                "Communities", 
+                "Projects",
+                "Innovation",
+                "Collaboration",
+                "Development"
+            ]
+        },
+        "description": {
+            "text1": "is a GitHub parent organization that manages and coordinates multiple sub-organizations across different domains. From",
+            "highlight": " indie game development",
+            "text2": "to enterprise solutions, we foster collaboration and innovation."
+        },
+        "cta": {
+            "contribute": "Join the Community",
+            "explore": "View Organizations"
+        }
+    },
+    "coreAims": {
+        "title": "Guiding Principles",
+        "description": "Our mission is driven by a set of core principles that ensure we deliver innovative, high-quality, and collaborative open-source solutions.",
+        "innovation": {
+            "title": "Innovation",
+            "description": "We encourage creative approaches and experimental projects across our sub-organizations, pushing boundaries in their respective domains."
+        },
+        "quality": {
+            "title": "Quality",
+            "description": "Every project under our umbrella maintains high standards, from code quality to user experience, ensuring reliable and maintainable solutions."
+        },
+        "collaboration": {
+            "title": "Collaboration",
+            "description": "We facilitate cross-organization collaboration, sharing knowledge and resources to create stronger, more cohesive open source ecosystems."
+        },
+        "openSource": {
+            "title": "Open Source",
+            "description": "All our projects are open source, promoting transparency, community involvement, and the free exchange of ideas and code."
+        }
+    },
+    "projects": {
+        "title": "Our Organizations",
+        "subtitle": "Each sub-organization focuses on specific domains, from gaming to enterprise solutions, all working together under the Axulogic umbrella.",
+        "learnMore": "Learn More",
+        "nexusDb": {
+            "description": "A comprehensive database solution designed for modern applications, providing robust data management and scalability."
+        },
+        "synapseFlow": {
+            "description": "An innovative workflow automation platform that streamlines processes and enhances productivity across teams."
+        },
+        "heliosUi": {
+            "description": "A modern UI component library built for developers, offering customizable and accessible design systems."
+        }
+    },
+    "techStack": {
+        "title": "Technology Stack",
+        "subtitle": "Our organizations work with diverse technologies, from game engines to enterprise frameworks, ensuring the right tools for each project."
+    },
+    "footer": {
+        "tagline": "Fostering open source collaboration.",
+        "copyright": "All rights reserved.",
+        "status": {
+            "online": "Online",
+            "projects": "Organizations",
+            "contributors": "Contributors"
+        },
+        "links": {
+            "github": "GitHub",
+            "twitter": "Twitter",
+            "community": "Community"
+        },
+        "navigate": {
+            "title": "Navigate",
+            "projects": "Projects",
+            "community": "Community",
+            "blog": "Blog"
+        },
+        "resources": {
+            "title": "Resources",
+            "contribute": "Contribute",
+            "documentation": "Documentation",
+            "brand": "Brand Assets"
+        },
+        "connect": {
+            "title": "Connect",
+            "github": "GitHub",
+            "twitter": "Twitter",
+            "community": "Community"
+        }
+    },
+    "splash": {
+        "bootSequence": [
+            "Axulogic OS v2.7.1 INITIALIZING...",
+            "MEMORY CHECK: 256TB ECC RAM...",
+            "CPU: Quantum Core x128 @ 8.2 THz...",
+            "GPU: Photonic Co-processor Array...",
+            "Connecting to global mesh network...",
+            "Auth systems online...",
+            "Welcome, Operator."
+        ]
+    }
+}

@@ -1,0 +1,109 @@
+
+{
+    "header": {
+        "docs": "Docs",
+        "projects": "Projetos",
+        "contribute": "Contribuir"
+    },
+    "hero": {
+        "title": {
+            "before": "Gerenciando",
+            "after": "Eficientemente",
+            "rotatingHighlights": [
+                "Organizações",
+                "Comunidades", 
+                "Projetos",
+                "Inovação",
+                "Colaboração",
+                "Desenvolvimento"
+            ]
+        },
+        "description": {
+            "text1": "é uma organização GitHub mãe que gerencia e coordena múltiplas sub-organizações em diferentes domínios. Desde",
+            "highlight": " desenvolvimento de jogos indie",
+            "text2": "até soluções empresariais, fomentamos colaboração e inovação."
+        },
+        "cta": {
+            "contribute": "Junte-se à Comunidade",
+            "explore": "Ver Organizações"
+        }
+    },
+    "coreAims": {
+        "title": "Princípios Orientadores",
+        "description": "Nossa missão é impulsionada por um conjunto de princípios fundamentais que garantem que entreguemos soluções open source inovadoras, de alta qualidade e colaborativas.",
+        "innovation": {
+            "title": "Inovação",
+            "description": "Incentivamos abordagens criativas e projetos experimentais em nossas sub-organizações, expandindo fronteiras em seus respectivos domínios."
+        },
+        "quality": {
+            "title": "Qualidade",
+            "description": "Cada projeto sob nossa responsabilidade mantém altos padrões, desde qualidade de código até experiência do usuário, garantindo soluções confiáveis e sustentáveis."
+        },
+        "collaboration": {
+            "title": "Colaboração",
+            "description": "Facilitamos a colaboração entre organizações, compartilhando conhecimento e recursos para criar ecossistemas open source mais fortes e coesos."
+        },
+        "openSource": {
+            "title": "Código Aberto",
+            "description": "Todos os nossos projetos são open source, promovendo transparência, envolvimento da comunidade e o livre intercâmbio de ideias e código."
+        }
+    },
+    "projects": {
+        "title": "Nossas Organizações",
+        "subtitle": "Cada sub-organização foca em domínios específicos, desde jogos até soluções empresariais, todas trabalhando juntas sob o guarda-chuva da Axulogic.",
+        "learnMore": "Saiba Mais",
+        "nexusDb": {
+            "description": "Uma solução de banco de dados abrangente projetada para aplicações modernas, fornecendo gerenciamento robusto de dados e escalabilidade."
+        },
+        "synapseFlow": {
+            "description": "Uma plataforma inovadora de automação de fluxo de trabalho que otimiza processos e aumenta a produtividade entre equipes."
+        },
+        "heliosUi": {
+            "description": "Uma biblioteca moderna de componentes UI construída para desenvolvedores, oferecendo sistemas de design personalizáveis e acessíveis."
+        }
+    },
+    "techStack": {
+        "title": "Stack Tecnológica",
+        "subtitle": "Nossas organizações trabalham com tecnologias diversas, desde motores de jogos até frameworks empresariais, garantindo as ferramentas certas para cada projeto."
+    },
+    "footer": {
+        "tagline": "Fomentando colaboração open source.",
+        "copyright": "Todos os direitos reservados.",
+        "status": {
+            "online": "Online",
+            "projects": "Organizações",
+            "contributors": "Contribuidores"
+        },
+        "links": {
+            "github": "GitHub",
+            "twitter": "Twitter",
+            "community": "Comunidade"
+        },
+        "navigate": {
+            "title": "Navegar",
+            "projects": "Projetos",
+            "community": "Comunidade",
+            "blog": "Blog"
+        },
+        "resources": {
+            "title": "Recursos",
+            "contribute": "Contribuir",
+            "documentation": "Documentação",
+            "brand": "Recursos da Marca"
+        },
+        "connect": {
+            "title": "Conectar"
+        }
+    },
+    "splash": {
+        "bootSequence": [
+            "Axulogic OS v2.7.1 INICIALIZANDO...",
+            "VERIFICAÇÃO DE MEMÓRIA: 256TB RAM ECC...",
+            "CPU: Núcleo Quântico x128 @ 8.2 THz...",
+            "GPU: Array Co-processador Fotônico...",
+            "Conectando à rede mesh global...",
+            "Sistemas de autenticação online...",
+            "Bem-vindo, Operador."
+        ]
+    }
+}

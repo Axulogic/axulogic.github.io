@@ -1,0 +1,272 @@
+@import './fonts.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 99%;
+    --foreground: 240 10% 3.9%;
+    --card: 240 10% 99%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 240 10% 99%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 346.8 77.2% 49.8%;
+    --primary-foreground: 355.7 100% 97.3%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 346.8 77.2% 49.8%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+  }
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 180 95% 60%;
+    --primary-foreground: 180 100% 12%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 180 95% 60%;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground transition-colors duration-300;
+    scrollbar-color: hsl(var(--primary)) hsl(var(--background));
+  }
+  
+  ::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary) / 0.3);
+    border-radius: 10px;
+    border: 2px solid hsl(var(--background));
+    transition: all 0.3s ease;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary) / 0.6);
+    transform: scale(1.1);
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: hsl(var(--background));
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+  }
+  
+  body {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
+  }
+  
+  .smooth-scroll {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  * {
+    max-width: 100%;
+  }
+  
+  .smooth-scroll {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--primary) / 0.3) hsl(var(--background));
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+  
+  a, button, input, textarea, select {
+    transition: all 0.2s ease-in-out;
+  }
+  
+  *:focus-visible {
+    outline: 2px solid hsl(var(--primary));
+    outline-offset: 2px;
+  }
+
+  .animated-content {
+    opacity: 0;
+    transform: translateY(20px);
+    will-change: opacity, transform;
+    transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @keyframes background-pan {
+    from { background-position: 0% 0%; }
+    to { background-position: -200% 0%; }
+  }
+
+  .animated-grid-background {
+    background-image:
+      linear-gradient(hsl(var(--primary) / 0.1) 1px, transparent 1px),
+      linear-gradient(to right, hsl(var(--primary) / 0.1) 1px, hsl(var(--background)) 1px);
+    background-size: 2rem 2rem;
+    animation: background-pan 8s linear infinite;
+  }
+  
+  .header-logo-glow::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: radial-gradient(ellipse at center, hsl(var(--primary) / 0.15), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .dark .header-logo-glow::before {
+    background: radial-gradient(ellipse at center, hsl(var(--primary) / 0.25), transparent 70%);
+  }
+
+  .header-logo-glow:hover::before {
+    opacity: 1;
+  }
+  
+  @keyframes scanline {
+    0%, 100% { transform: translateY(-100%); }
+    10%, 30%, 50%, 70%, 90% { transform: translateY(100%); }
+    20%, 40%, 60%, 80% { transform: translateY(-100%); }
+  }
+
+  .scanline-effect::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: hsl(var(--primary) / 0.5);
+    box-shadow: 0 0 5px hsl(var(--primary) / 0.7), 0 0 10px hsl(var(--primary) / 0.5);
+    animation: scanline 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    opacity: 0.8;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .fade-in {
+    animation: fadeIn 0.5s ease-in-out forwards;
+  }
+  
+  @keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  .animate-spin-slow {
+    animation: spin-slow 8s linear infinite;
+  }
+  
+  @keyframes pulse-glow {
+    0%, 100% { 
+      opacity: 0.5;
+      box-shadow: 0 0 5px hsl(var(--primary) / 0.3);
+    }
+    50% { 
+      opacity: 1;
+      box-shadow: 0 0 20px hsl(var(--primary) / 0.6), 0 0 30px hsl(var(--primary) / 0.4);
+    }
+  }
+  
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+  
+  @keyframes text-shimmer {
+    0% {
+      background-position: -200% center;
+    }
+    100% {
+      background-position: 200% center;
+    }
+  }
+  
+  .text-shimmer {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      hsl(var(--primary) / 0.8),
+      transparent
+    );
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: text-shimmer 2s ease-in-out infinite;
+  }
+  
+  @keyframes glitch {
+    0%, 100% {
+      transform: translate(0);
+    }
+    20% {
+      transform: translate(-2px, 2px);
+    }
+    40% {
+      transform: translate(-2px, -2px);
+    }
+    60% {
+      transform: translate(2px, 2px);
+    }
+    80% {
+      transform: translate(2px, -2px);
+    }
+  }
+  
+  .glitch-effect {
+    animation: glitch 0.3s ease-in-out;
+  }
+}
