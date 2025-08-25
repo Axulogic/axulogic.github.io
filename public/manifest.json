@@ -1,5 +1,5 @@
 {
-  "name": "Axulogic - Managing Open Source Organizations Efficiently",
+  "name": "Axulogic",
   "short_name": "Axulogic",
   "description": "Axulogic is a GitHub parent organization that manages and coordinates multiple sub-organizations across different domains. From indie game development to enterprise solutions, we foster collaboration and innovation.",
   "start_url": "/",
@@ -12,13 +12,13 @@
   "categories": ["productivity", "development", "technology"],
   "icons": [
     {
-      "src": "/assets/Noma1ColorIcon.png",
+      "src": "/src/app/favicon.ico",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/assets/Noma1ColorIcon.png",
+      "src": "/src/app/favicon.ico",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
