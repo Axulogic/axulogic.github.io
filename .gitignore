@@ -16,6 +16,8 @@
 
 /scripts
 
+*.md
+
 .DS_Store
 *.pem
 

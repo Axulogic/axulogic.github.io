@@ -9,10 +9,78 @@ export async function generateStaticParams() {
 }
 
 export const metadata: Metadata = {
-  title: "Axulogic",
-  description: "Developing innovative and high-quality technological solutions.",
+  title: "Axulogic - Managing Open Source Organizations Efficiently",
+  description: "Axulogic is a GitHub parent organization that manages and coordinates multiple sub-organizations across different domains. From indie game development to enterprise solutions, we foster collaboration and innovation.",
+  keywords: ["open source", "github", "organizations", "development", "collaboration", "innovation", "technology", "software", "community"],
+  authors: [{ name: "Axulogic Team" }],
+  creator: "Axulogic",
+  publisher: "Axulogic",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://axulogic.com'),
+  alternates: {
+    canonical: '/',
+    languages: {
+      'en-US': '/en-US',
+      'pt-BR': '/pt-BR',
+    },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://axulogic.com',
+    siteName: 'Axulogic',
+    title: 'Axulogic - Managing Open Source Organizations Efficiently',
+    description: 'Axulogic is a GitHub parent organization that manages and coordinates multiple sub-organizations across different domains. From indie game development to enterprise solutions, we foster collaboration and innovation.',
+    images: [
+      {
+        url: '/assets/print.png',
+        width: 1200,
+        height: 630,
+        alt: 'Axulogic - Open Source Organization Management',
+        type: 'image/png',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@Axulogic',
+    creator: '@Axulogic',
+    title: 'Axulogic - Managing Open Source Organizations Efficiently',
+    description: 'Axulogic is a GitHub parent organization that manages and coordinates multiple sub-organizations across different domains. From indie game development to enterprise solutions, we foster collaboration and innovation.',
+    images: ['/assets/print.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   icons: {
-    icon: '/assets/Noma1ColorIcon.png',
+    icon: [
+      { url: '/assets/Noma1ColorIcon.png', sizes: '32x32', type: 'image/png' },
+      { url: '/assets/Noma1ColorIcon.png', sizes: '16x16', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/assets/Noma1ColorIcon.png', sizes: '180x180', type: 'image/png' },
+    ],
+    other: [
+      { rel: 'mask-icon', url: '/assets/Noma1ColorIcon.png', color: '#00ffff' },
+    ],
+  },
+  manifest: '/manifest.json',
+  other: {
+    'theme-color': '#00ffff',
+    'msapplication-TileColor': '#00ffff',
+    'msapplication-config': '/browserconfig.xml',
   },
 };
 
@@ -20,7 +88,7 @@ export default async function RootLayout({
   children,
   params,
 }: Readonly<{
-  children: React.ReactNode;
+  children: any;
   params: Promise<{ lang: Locale }>;
 }>) {
   const { lang } = await params;
