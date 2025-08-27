@@ -101,7 +101,7 @@ export function PageClient({ lang, dictionary, asciiArtBlack, asciiArtWhite, asc
                       </Button>
                       <Button asChild size="lg" variant="outline">
                         <Link 
-                          href="#projects"
+                          href="https://github.com/linwaru"
                           onClick={() => event({
                             action: 'click',
                             category: 'engagement',
