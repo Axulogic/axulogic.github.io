@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "../globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { ThemeProvider } from "@/components/theme-provider";
+import { StructuredData } from "@/components/structured-data";
+import { GoogleTagManager, GoogleTagManagerNoScript } from "@/components/google-tag-manager";
 import { i18n, type Locale } from "@/i18n-config";
 
 export async function generateStaticParams() {
@@ -9,9 +11,9 @@ export async function generateStaticParams() {
 }
 
 export const metadata: Metadata = {
-  title: "Axulogic - Managing Open Source Organizations Efficiently",
+  title: "Axulogic",
   description: "Axulogic is a GitHub parent organization that manages and coordinates multiple sub-organizations across different domains. From indie game development to enterprise solutions, we foster collaboration and innovation.",
-  keywords: ["open source", "github", "organizations", "development", "collaboration", "innovation", "technology", "software", "community"],
+  keywords: ["Axulogic", "open source", "github", "organizations", "development", "collaboration", "innovation", "technology", "software", "community", "github organizations", "open source management"],
   authors: [{ name: "Axulogic Team" }],
   creator: "Axulogic",
   publisher: "Axulogic",
@@ -66,14 +68,14 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/assets/Noma1ColorIcon.png', sizes: '32x32', type: 'image/png' },
-      { url: '/assets/Noma1ColorIcon.png', sizes: '16x16', type: 'image/png' },
+      { url: '/assets/axulogic.svg', sizes: '32x32', type: 'image/svg+xml' },
+      { url: '/assets/axulogic.svg', sizes: '16x16', type: 'image/svg+xml' },
     ],
     apple: [
-      { url: '/assets/Noma1ColorIcon.png', sizes: '180x180', type: 'image/png' },
+      { url: '/assets/axulogic.svg', sizes: '180x180', type: 'image/svg+xml' },
     ],
     other: [
-      { rel: 'mask-icon', url: '/assets/Noma1ColorIcon.png', color: '#00ffff' },
+      { rel: 'mask-icon', url: '/assets/axulogic.svg', color: '#00ffff' },
     ],
   },
   manifest: '/manifest.json',
@@ -95,11 +97,14 @@ export default async function RootLayout({
   return (
     <html lang={lang} suppressHydrationWarning>
       <head>
+        <GoogleTagManager />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Share+Tech+Mono&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+        <StructuredData />
       </head>
       <body className="font-body antialiased">
+        <GoogleTagManagerNoScript />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

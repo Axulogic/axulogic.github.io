@@ -18,6 +18,7 @@ import { SciFiDivider } from './sci-fi-divider';
 import { InteractiveGrid } from './interactive-grid';
 import { RotatingHighlight } from './rotating-highlight';
 import { useGitHubStats } from '@/hooks/use-github-stats';
+import { useGTM } from '@/hooks/use-gtm';
 
 type Dictionary = Awaited<ReturnType<typeof import('@/get-dictionary').getDictionary>>;
 
@@ -34,6 +35,7 @@ export function PageClient({ lang, dictionary, asciiArtBlack, asciiArtWhite, asc
   const { resolvedTheme } = useTheme();
   const [currentAsciiArt, setCurrentAsciiArt] = useState('');
   const githubStats = useGitHubStats();
+  const { event } = useGTM();
 
   useEffect(() => {
     setCurrentAsciiArt(resolvedTheme === 'dark' ? asciiArtBlack : asciiArtWhite);
@@ -83,13 +85,29 @@ export function PageClient({ lang, dictionary, asciiArtBlack, asciiArtWhite, asc
                   <AnimatedContent useObserver={true} style={{ animationDelay: '200ms' }}>
                     <div className="flex flex-col gap-2 min-[400px]:flex-row pointer-events-auto">
                       <Button asChild size="lg">
-                        <a href="https://github.com/Axulogic/Axulogic/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer">
+                        <a 
+                          href="https://github.com/Axulogic/Axulogic/blob/main/CONTRIBUTING.md" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          onClick={() => event({
+                            action: 'click',
+                            category: 'engagement',
+                            label: 'contribute_button'
+                          })}
+                        >
                           {dictionary.hero.cta.contribute}
                           <GitBranch className="ml-2" />
                         </a>
                       </Button>
                       <Button asChild size="lg" variant="outline">
-                        <Link href="#projects">
+                        <Link 
+                          href="#projects"
+                          onClick={() => event({
+                            action: 'click',
+                            category: 'engagement',
+                            label: 'explore_projects_button'
+                          })}
+                        >
                           {dictionary.hero.cta.explore}
                           <Sparkles className="ml-2" />
                         </Link>

@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://axulogic.uk/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Disallow
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+
+# Allow
+Allow: /
+Allow: /en-US/
+Allow: /pt-BR/
