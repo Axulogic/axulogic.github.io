@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://axulogic.com'),
+  metadataBase: new URL('https://axulogic.uk'),
   alternates: {
     canonical: '/',
     languages: {
@@ -31,13 +31,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://axulogic.com',
+    url: 'https://axulogic.uk',
     siteName: 'Axulogic',
     title: 'Axulogic - Managing Open Source Organizations Efficiently',
     description: 'Axulogic is a GitHub parent organization that manages and coordinates multiple sub-organizations across different domains. From indie game development to enterprise solutions, we foster collaboration and innovation.',
     images: [
       {
-        url: '/assets/print.png',
+        url: 'https://raw.githubusercontent.com/Axulogic/axulogic.github.io/refs/heads/main/public/assets/print.png',
         width: 1200,
         height: 630,
         alt: 'Axulogic - Open Source Organization Management',
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     creator: '@Axulogic',
     title: 'Axulogic - Managing Open Source Organizations Efficiently',
     description: 'Axulogic is a GitHub parent organization that manages and coordinates multiple sub-organizations across different domains. From indie game development to enterprise solutions, we foster collaboration and innovation.',
-    images: ['/assets/print.png'],
+    images: ['https://raw.githubusercontent.com/Axulogic/axulogic.github.io/refs/heads/main/public/assets/print.png'],
   },
   robots: {
     index: true,
